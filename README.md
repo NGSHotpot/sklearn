@@ -14,7 +14,7 @@
 
 Sklearn全名叫scikit-learn，使用Sklearn官网对sklearn的描述
 
-## Sklearn
+
 ### Machine learning in Python
 
 * Simple and efficient tools for data mining and data analysis
