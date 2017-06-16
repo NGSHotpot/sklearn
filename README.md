@@ -10,7 +10,7 @@
 
 而sklearn为Python中最常用的机器学习库，可见sklearn的重要。
 
-## Sklearn
+## Sklearn简介
 
 Sklearn全名叫scikit-learn，使用Sklearn官网对sklearn的描述
 
