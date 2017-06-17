@@ -11,7 +11,7 @@
 1. 数学本质  
 
 k-means把含有**N**个样本的数据集**X** 切分成**k**个类别 **C**，对**C**中的每个类其中心点为![equation](http://latex.codecogs.com/gif.latex?\mu_{j})
-, 最终使组内到中心点的平方和最小，这个可以
+, 最终使组内到中心点的平方和最小：
  
 ![equation](http://latex.codecogs.com/gif.latex?\sum_{i=0}^{N}\sum_{j=0}^{k}min(||x_{i,j}-\mu_{j}||^2))
 
