@@ -24,6 +24,11 @@ Sklearn全名叫scikit-learn，使用Sklearn官网对sklearn的描述
 
 本系列将介绍Sklearn的算法原理、使用方法、应用案例等。
 
+## Sklearn文章
+
+1. ![K-means聚类](https://github.com/NGSHotpot/sklearn/blob/master/sklearn:%20k-means.md)
+
+
 ## Reference
 
 1. http://scikit-learn.org/stable/index.html
