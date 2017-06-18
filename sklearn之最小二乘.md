@@ -23,6 +23,8 @@
 
 ![equation](http://latex.codecogs.com/gif.latex?\sum_{i=1}^{n}{\Vert\hat{Y_i}-Y_i\Vert_{2}^{2}})
 
-为简便，下面使用一元线性回归来说明最小二乘法，即![equation](http://latex.codecogs.com/gif.latex?p=1)，然后所要回归的方程变为![equation](http://latex.codecogs.com/gif.latex?Y=a_0+a_1X+\epsilon)，所有估计的系数只有![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)，假如总共有![equation](http://latex.codecogs.com/gif.latex?n)个样本的数据![equation](http://latex.codecogs.com/gif.latex?x_1,x_2,...,x_n)和![equation](http://latex.codecogs.com/gif.latex?y_1,y_2,...,y_n)
+为简便，下面使用一元线性回归来说明最小二乘法，即![equation](http://latex.codecogs.com/gif.latex?p=1)，然后所要回归的方程变为![equation](http://latex.codecogs.com/gif.latex?Y=a_0+a_1X+\epsilon)，所有估计的系数只有![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)，假如总共有![equation](http://latex.codecogs.com/gif.latex?n)个样本的数据![equation](http://latex.codecogs.com/gif.latex?x_1,x_2,...,x_n)和![equation](http://latex.codecogs.com/gif.latex?y_1,y_2,...,y_n),所以残差平方和就变为了![equation](http://latex.codecogs.com/gif.latex?\sum_{i=1}^{n}{\Vert\hat{y_i}-y_i\Vert_{2}^{2}}=\sum_{i=1}^{n}{\Vert{a_0+a_1x_i-y_i}\Vert_{2}^{2}})最小。
+
+
 
 
