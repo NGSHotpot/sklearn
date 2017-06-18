@@ -58,8 +58,62 @@
 
 ## 应用实例
 
-Iris数据集是很出名的机器学习数据集，
+Iris数据集是很出名的机器学习数据集，总共包含三种不同的iris花的种类，其中每种花有50个数据集，每个数据集包括花萼的长度、花萼的宽度、花瓣的长度、花瓣的宽度四个数据。该数据集可以从UCI机器学习数据库下载（https://archive.ics.uci.edu/ml/datasets.html）， 这个数据集最常用作分类，但是这里我们取其中的Iris-setosa类型的数据来做回归分析。自变量![equation](http://latex.codecogs.com/gif.latex?length)为花萼的长度，因变量![equation](http://latex.codecogs.com/gif.latex?width)为花萼的宽度，建立如下线性回归模型：
+
+![equation](http://latex.codecogs.com/gif.latex?width=a_0+a_1height+\epsilon)
+
+然后根据刚才推出的计算回归系数的公式计算系数![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)，计算代码如下：
+
+```python
+def cal_coef(x, y):
+	"""
+	calculate the coefficient in y = a0 + a1 * x
+	"""
+	n = len(x)
+	square = [tmp * tmp  for tmp in x]
+	multi = [x[i] * y[i] for i in range(n)]
+	a0 = (sum(square)*sum(y) - sum(x)*sum(multi)) / (n*sum(square) - sum(x)**2)
+	a1 = (n*sum(multi) - sum(x) * sum(y)) / (n*sum(square) - sum(x)**2)
+	return a0, a1
+
+height = ...  # read the data here, list here, [1,2,3]
+weight = ... # read the data here, list here, [1, 3, 6]
+
+a0, a1 = cal_coef(height, weight)
+```
+通过上面的代码可以得到![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)的值分别为：
+
+![equation](http://latex.codecogs.com/gif.latex?a_0=-0.62301)
+![equation](http://latex.codecogs.com/gif.latex?a_1=0.80723)
+
+上面的代码写起来虽然不算复杂，但是若是对于多元线性回归，就会很麻烦了。sklearn提供了linear_model的模块，可以很方便的做线性回归，对这个例子代码如下：
+
+```python
+from sklearn import linear_model
+
+height = ...  # read the data here, list, [[2], [3], [4]]
+weight = ... # read the data here, array, [1, 3, 4]
+
+lr = linear_model.LinearRegression()
+lr.fit (height, weight)
+
+a0 lr.intercept_
+a1 = lr.coef_
+```
+使用sklearn很方便，只需要在读入数据后，fit一下就可以得到所要求的![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)了，计算结果为
+
+![equation](http://latex.codecogs.com/gif.latex?a_0=-0.62301)
+![equation](http://latex.codecogs.com/gif.latex?a_1=0.80723)
+
+和使用自己写的函数的结果一致。
+
+## 总结
+
+本文主要介绍了线性回归中最小二乘法估计系数，并且给出了其在估计一元线性回归过程中的具体步骤，然后以iris数据集为例给出了最小二乘法计算系数的函数及使用sklearn来计算系数的方法，希望本文能加深大家对最小二乘及线性回归的理解。
 
 
+## 参考文献
+
+1. http://scikit-learn.org/stable/modules/linear_model.html  其中1.1.1小节
 
 
