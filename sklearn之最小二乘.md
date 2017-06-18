@@ -23,8 +23,28 @@
 
 ![equation](http://latex.codecogs.com/gif.latex?\sum_{i=1}^{n}{\epsilon_{i}^{2}=\sum_{i=1}^{n}{\Vert\hat{Y_i}-Y_i\Vert_{2}^{2}})
 
-为简便，下面使用一元线性回归来说明最小二乘法，即![equation](http://latex.codecogs.com/gif.latex?p=1)，然后所要回归的方程变为![equation](http://latex.codecogs.com/gif.latex?Y=a_0+a_1X+\epsilon)，所有估计的系数只有![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)，假如总共有![equation](http://latex.codecogs.com/gif.latex?n)个样本的数据![equation](http://latex.codecogs.com/gif.latex?x_1,x_2,...,x_n)和![equation](http://latex.codecogs.com/gif.latex?y_1,y_2,...,y_n),所以残差平方和就变为了![equation](http://latex.codecogs.com/gif.latex?\sum_{i=1}^{n}{\epsilon_{i}^{2}=\sum_{i=1}^{n}{\Vert\hat{y_i}-y_i\Vert_{2}^{2}}=\sum_{i=1}^{n}{\Vert{a_0+a_1x_i-y_i}\Vert_{2}^{2}})最小。
+为简便，下面使用一元线性回归来说明最小二乘法，即![equation](http://latex.codecogs.com/gif.latex?p=1)，然后所要回归的方程变为![equation](http://latex.codecogs.com/gif.latex?Y=a_0+a_1X+\epsilon)，所有估计的系数只有![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)，假如总共有![equation](http://latex.codecogs.com/gif.latex?n)个样本的数据![equation](http://latex.codecogs.com/gif.latex?x_1,x_2,...,x_n)和![equation](http://latex.codecogs.com/gif.latex?y_1,y_2,...,y_n),所以残差平方和就变为了:
 
+![equation](http://latex.codecogs.com/gif.latex?\sum_{i=1}^{n}{\epsilon_{i}^{2}=\sum_{i=1}^{n}{\Vert\hat{y_i}-y_i\Vert_{2}^{2}}=\sum_{i=1}^{n}{\Vert{a_0+a_1x_i-y_i}\Vert_{2}^{2}})
 
+要想求得使得残差平方和最小的![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)可以对![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)求偏导，然后令偏导数值等于0时，此时就能取到最小值。学数学的朋友应该知道，对于某个连续可导的函数来说，若是该函数的导数在某点处取到0，那么函数值在该点达到极大值或者极小值，注意这里的极大值和极小值一个局部概念，和我们通常说的最大值和最小值是不一样的。那么为什么最小二乘里面直接求偏导为0的点就是最小值呢？可能是最大值吗？当然是不可能的，因为最小二乘中的函数衡量的是一个残差平方和，所以若是将偏差到足够大，残差平方和是可以取无穷大的，不存在最大值，所以若是存在偏导为0的点，那么该点为一个极小值点。
+
+下面求分别对![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)求偏导且令偏导等于0：
+
+![equation](http://latex.codecogs.com/gif.latex?\frac{dy}{da_0}=2na_0+2\sum_{i=1}^{n}{x_ia_1}-2\sum_{i=1}^{n}{y_i}=0)
+
+![equation](http://latex.codecogs.com/gif.latex?\frac{dy}{da_1}=2a_0\sum_{i=1}^{n}{x_i}+2\sum_{i=1}^{n}{x_i^2}-2\sum_{i=1}^{n}{x_iy_i}=0)
+
+对上述结果进行整理可以到方方程组：
+
+![equation](http://latex.codecogs.com/gif.latex?na_0+\sum_{i=1}^{n}{x_ia_1}-\sum_{i=1}^{n}{y_i}=0)
+
+![equation](http://latex.codecogs.com/gif.latex?a_0\sum_{i=1}^{n}{x_i}+\sum_{i=1}^{n}{x_i^2}-\sum_{i=1}^{n}{x_iy_i}=0)
+
+未知数只有![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)，这个是最简单的求解二元一次方程组的问题啦，大家在初中或者小学的时候就学过了吧！然后可以得到![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)的值了。最后解得结果如下：
+
+![equation](http://latex.codecogs.com/gif.latex?a_0=\frac{\sum_{i=1}^{n}{x_i^2}\sum_{i=1}^{n}{y_i}-\sum_{i=1}^{n}{x_i}\sum_{i=1}^{n}{x_iy_i}}{n\sum_{i=1}^{n}{x_i^2}-(\sum_{i=1}^{n}{x_i})^2})
+
+![equation](http://latex.codecogs.com/gif.latex?a_1=\frac{n\sum_{i=1}^{n}{x_iy_i}-\sum_{i=1}^{n}{x_i}\sum_{i=1}^{n}{y_i}}{n\sum_{i=1}^{n}{x_i^2}-(\sum_{i=1}^{n}{x_i})^2})
 
 
