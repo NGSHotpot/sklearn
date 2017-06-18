@@ -26,7 +26,7 @@ Sklearn全名叫scikit-learn，使用Sklearn官网对sklearn的描述
 
 ## Sklearn文章
 
-1. ![K-means聚类](https://github.com/NGSHotpot/sklearn/blob/master/sklearn:%20k-means.md)
+1. [K-means聚类](https://github.com/NGSHotpot/sklearn/blob/master/sklearn:%20k-means.md)
 
 
 ## Reference
