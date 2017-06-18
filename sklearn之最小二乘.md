@@ -47,4 +47,19 @@
 
 ![equation](http://latex.codecogs.com/gif.latex?a_1=\frac{n\sum_{i=1}^{n}{x_iy_i}-\sum_{i=1}^{n}{x_i}\sum_{i=1}^{n}{y_i}}{n\sum_{i=1}^{n}{x_i^2}-(\sum_{i=1}^{n}{x_i})^2})
 
+通过这两个公式，就可以根据回归的值确定系数![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)了。
+
+但是若是变量有![equation](http://latex.codecogs.com/gif.latex?p)个呢？方法是同样的，首先写出残差平方和的公式：
+
+![equation](http://latex.codecogs.com/gif.latex?\sum_{i=1}^{n}{\epsilon_{i}^{2}=\sum_{i=1}^{n}{\Vert\hat{Y_i}-Y_i\Vert_{2}^{2}}=\sum_{i=1}^{n}{\Vert{a_0+a_1X_1+a_2X_2+...+a_pX_p-Y_i}\Vert_{2}^{2}})
+
+然后同样对![equation](http://latex.codecogs.com/gif.latex?a_0,a_1,a_2,...,a_p)这![equation](http://latex.codecogs.com/gif.latex?p+1)个变量求偏导，并使其等于0，如此便可以得到一个![equation](http://latex.codecogs.com/gif.latex?p+1)元的方程组，解之即可。
+
+
+## 应用实例
+
+Iris数据集是很出名的机器学习数据集，
+
+
+
 
