@@ -58,7 +58,7 @@
 
 ## 应用实例
 
-Iris数据集是很出名的机器学习数据集，总共包含三种不同的iris花的种类，其中每种花有50个数据集，每个数据集包括花萼的长度、花萼的宽度、花瓣的长度、花瓣的宽度四个数据。该数据集可以从UCI机器学习数据库下载（https://archive.ics.uci.edu/ml/datasets.html）， 这个数据集最常用作分类，但是这里我们取其中的Iris-setosa类型的数据来做回归分析。自变量![equation](http://latex.codecogs.com/gif.latex?length)为花萼的长度，因变量![equation](http://latex.codecogs.com/gif.latex?width)为花萼的宽度，建立如下线性回归模型：
+Iris数据集是很出名的机器学习数据集，总共包含三种不同的iris花的种类，其中每种花有50个数据集，每个数据集包括花萼的长度、花萼的宽度、花瓣的长度、花瓣的宽度四个数据。该数据集可以从UCI机器学习数据库下载（https://archive.ics.uci.edu/ml/datasets.html ），这个数据集最常用作分类，但是这里我们取其中的Iris-setosa类型的数据来做回归分析。自变量![equation](http://latex.codecogs.com/gif.latex?length)为花萼的长度，因变量![equation](http://latex.codecogs.com/gif.latex?width)为花萼的宽度，建立如下线性回归模型：
 
 ![equation](http://latex.codecogs.com/gif.latex?width=a_0+a_1height+\epsilon)
 
