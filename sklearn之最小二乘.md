@@ -84,6 +84,7 @@ a0, a1 = cal_coef(height, weight)
 通过上面的代码可以得到![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)的值分别为：
 
 ![equation](http://latex.codecogs.com/gif.latex?a_0=-0.62301)
+
 ![equation](http://latex.codecogs.com/gif.latex?a_1=0.80723)
 
 上面的代码写起来虽然不算复杂，但是若是对于多元线性回归，就会很麻烦了。sklearn提供了linear_model的模块，可以很方便的做线性回归，对这个例子代码如下：
@@ -103,6 +104,7 @@ a1 = lr.coef_
 使用sklearn很方便，只需要在读入数据后，fit一下就可以得到所要求的![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)了，计算结果为
 
 ![equation](http://latex.codecogs.com/gif.latex?a_0=-0.62301)
+
 ![equation](http://latex.codecogs.com/gif.latex?a_1=0.80723)
 
 和使用自己写的函数的结果一致。
