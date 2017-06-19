@@ -7,4 +7,21 @@
 
 ## 线性回归最小二乘的问题
 
+之前说到最小二乘法求解线性回归系数可以转变为求解方程组的问题：
+
+![equation](http://latex.codecogs.com/gif.latex?na_0+\sum_{i=1}^{n}{x_ia_1}-\sum_{i=1}^{n}{y_i}=0)
+
+![equation](http://latex.codecogs.com/gif.latex?a_0\sum_{i=1}^{n}{x_i}+\sum_{i=1}^{n}{x_i^2}-\sum_{i=1}^{n}{x_iy_i}=0)
+
+未知数只有![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)，这个是最简单的求解二元一次方程组的问题啦，大家在初中或者小学的时候就学过了吧！然后可以得到![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)的值了。
+
+上面说法是对的，中小学的时候在数学课上就学过如何求解上述方程，但是也不是如我们前文所提到的那么简单，将上述方程简化成如下二元一次方程组：
+
+![equation](http://latex.codecogs.com/gif.latex?a_1x+b_1y=c_1)
+
+![equation](http://latex.codecogs.com/gif.latex?a_2x+b_2y=c_2)
+
+那么由上面方程组可以得到：
+
+
 
