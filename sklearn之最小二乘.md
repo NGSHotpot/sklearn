@@ -77,9 +77,9 @@ def cal_coef(x, y):
 	return a0, a1
 
 height = ...  # read the data here, list here, [1,2,3]
-weight = ... # read the data here, list here, [1, 3, 6]
+width = ... # read the data here, list here, [1, 3, 6]
 
-a0, a1 = cal_coef(height, weight)
+a0, a1 = cal_coef(height, width)
 ```
 通过上面的代码可以得到![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)的值分别为：
 
@@ -93,10 +93,10 @@ a0, a1 = cal_coef(height, weight)
 from sklearn import linear_model
 
 height = ...  # read the data here, list, [[2], [3], [4]]
-weight = ... # read the data here, array, [1, 3, 4]
+width = ... # read the data here, array, [1, 3, 4]
 
 lr = linear_model.LinearRegression()
-lr.fit (height, weight)
+lr.fit (height, width)
 
 a0 lr.intercept_
 a1 = lr.coef_
