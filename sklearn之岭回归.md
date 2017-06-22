@@ -59,7 +59,7 @@
 
 二岭回归在最小二乘的残差平方的和的基础上加上一个和系数成比例的惩罚项，如下所示
 
-![equation](http://latex.codecogs.com/gif.latex?\sum_{i=1}^{n}{\epsilon_{i}^{2}=\sum_{i=1}^{n}{\Vert\hat{Y_i}-Y_i\Vert_{2}^{2}}+\sum_{i=1}^{p}{\alpha\Vert{a_i}\Vert^{2}})
+![equation](http://latex.codecogs.com/gif.latex?\sum_{i=1}^{n}{\epsilon_{i}^{2}=\sum_{i=1}^{n}{\Vert\hat{Y_i}-Y_i\Vert_{2}^{2}}+\sum_{i=0}^{p}{\alpha\Vert{a_i}\Vert^{2}})
 
 加上惩罚项之后有两个作用，第一是会使得回归的性能没有不加好，即回归的方差解释度会下降，第二是回归的系数更稳当，也就是更容易显著。当自变量间有较强相关性或者数据比较异常的时候可以使用岭回归。
 
