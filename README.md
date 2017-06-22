@@ -28,6 +28,7 @@ Sklearn全名叫scikit-learn，使用Sklearn官网对sklearn的描述
 
 1. [K-means聚类](https://github.com/NGSHotpot/sklearn/blob/master/sklearn:%20k-means.md)
 2. [sklearn之最小二乘](https://github.com/NGSHotpot/sklearn/blob/master/sklearn%E4%B9%8B%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98.md)
+3. [sklearn之岭回归](https://github.com/NGSHotpot/sklearn/blob/master/sklearn%E4%B9%8B%E5%B2%AD%E5%9B%9E%E5%BD%92.md)
 
 
 ## Reference
