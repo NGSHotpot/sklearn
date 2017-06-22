@@ -67,7 +67,7 @@
 
 ![equation](http://latex.codecogs.com/gif.latex?\frac{dy}{da_0}=2na_0+2\sum_{i=1}^{n}{x_ia_1}-2\sum_{i=1}^{n}{y_i}+2\alpha{a_0}=0)
 
-![equation](http://latex.codecogs.com/gif.latex?\frac{dy}{da_1}=2a_0\sum_{i=1}^{n}{x_i}+2\sum_{i=1}^{n}{x_i^2}-2\sum_{i=1}^{n}{x_iy_i}+2\alpha{a_1}=0)
+![equation](http://latex.codecogs.com/gif.latex?\frac{dy}{da_1}=2a_0\sum_{i=1}^{n}{x_i}+2\sum_{i=1}^{n}{x_i^2a_1}-2\sum_{i=1}^{n}{x_iy_i}+2\alpha{a_1}=0)
 
 对上述结果进行整理可以得到方程组：
 
