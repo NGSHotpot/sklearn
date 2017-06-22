@@ -82,5 +82,60 @@
 ![equation](http://latex.codecogs.com/gif.latex?a_1=\frac{n\sum_{i=1}^{n}{x_iy_i}-\sum_{i=1}^{n}{x_i}\sum_{i=1}^{n}{y_i}}{n(\sum_{i=1}^{n}{x_i^2}+\alpha)-(\sum_{i=1}^{n}{x_i})^2})
 
 ## 应用实例
+本文还是使用Iris数据集进行测试说明：Iris数据集是很出名的机器学习数据集，总共包含三种不同的iris花的种类，其中每种花有50个数据集，每个数据集包括花萼的长度、花萼的宽度、花瓣的长度、花瓣的宽度四个数据。该数据集可以从![UCI机器学习数据库下载](https://archive.ics.uci.edu/ml/index.php)，同时我也将用到的这个数据放到了本目录data文件夹下，这个数据集最常用作分类，但是这里我们取其中的Iris-setosa类型的数据来做回归分析。自变量![equation](http://latex.codecogs.com/gif.latex?length)为花萼的长度，因变量![equation](http://latex.codecogs.com/gif.latex?width)为花萼的宽度，建立如下线性回归模型：
 
+![equation](http://latex.codecogs.com/gif.latex?width=a_0+a_1height+\epsilon)
 
+我们使用岭回归的方式来求解这个问题，
+```python
+from sklearn import linear_model
+
+def readData(infile):
+    """
+    read the iris data
+    """
+    data = map(lambda x:x.strip().split(","), open(infile).readlines())
+    height = [float(x[0]) for x in data]
+    width = [float(x[1]) for x in data]
+    return height, width
+    
+def my_ridge(x, y, alpha):
+    """
+    ridge regression for simple linear regresion
+    """
+    n = len(x)
+    square = [tmp * tmp  for tmp in x]
+    multi = [x[i] * y[i] for i in range(n)]
+    a0 = ((sum(square)+alpha)*sum(y) - sum(x)*sum(multi)) / ((n)*(sum(square)+alpha) - sum(x)**2)
+    a1 = ((n)*sum(multi) - sum(x) * sum(y)) / ((n)*(sum(square)+alpha) - sum(x)**2)
+    return a0, a1
+
+def sklearn_ridge(x, y, alpha):
+    """
+    input x should be 2D array, such as [[1], [2], ...]
+    """
+    clf = linear_model.Ridge(alpha=alpha)
+    clf.fit(x, y)
+    return clf.intercept_, clf.coef_
+    
+height, width = readData(""data/iris_test.in"")
+height2 = [[x] for x in height]
+alpha = 0.5
+a0, a1 = my_ridge(height, width, alpha)
+b0, b1 = sklearn_ridge(height2, width, alpha)
+print "the results for my ridge: a0=",a0, "a1=",a1
+print "the results for sklearn ridge: a0=", b0, "a1=", b1
+```
+执行上述代码可以得到两种计算的结果是相同的。
+
+![equation](http://latex.codecogs.com/gif.latex?a_0=-0.31632615889)
+
+![equation](http://latex.codecogs.com/gif.latex?a_1=0.74597007)
+
+## 总结
+
+本文主要介绍了岭回归的方法进行线性回归，主要讲解和代码都是对简单线性回归进行的，对于多元的情况是使用矩阵计算来完成的。后面我们会慢慢介绍到。
+
+## 参考文献
+
+1. http://scikit-learn.org/stable/modules/linear_model.html#ridge-regression 1.1.2节
