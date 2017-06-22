@@ -26,3 +26,16 @@
 
 ![equation](http://latex.codecogs.com/gif.latex?D=\begin{vmatrix}a_1&b_1\\\\a_2&b_2\end{vmatrix})
 
+![equation](http://latex.codecogs.com/gif.latex?D_x=\begin{vmatrix}c_1&b_1\\\\c_2&b_2\end{vmatrix})
+
+![equation](http://latex.codecogs.com/gif.latex?D_y=\begin{vmatrix}a_1&c_1\\\\a_2&c_2\end{vmatrix})
+
+由已知克拉默定理可以得到，若是![equation](http://latex.codecogs.com/gif.latex?D\ne0)时，方程组有唯一解，其解分别为：
+
+![equation](http://latex.codecogs.com/gif.latex?x=\frac{D_x}{D})
+
+![equation](http://latex.codecogs.com/gif.latex?y=\frac{D_y}{D})
+
+这个时候我们就很开心，线性回归直接用最小二乘就做好了。
+
+但是若是![equation](http://latex.codecogs.com/gif.latex?D=0)呢？这个时候就麻烦了，方程组要么无解要么有无数解。任何一种情况都会导致使用最小二乘估计回归系数失效（当然在真实数据中，这种情况发生得不多）。
