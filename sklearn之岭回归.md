@@ -23,7 +23,7 @@
 
 那么由上面方程组可以得到：
 
-![equation](http://latex.codecogs.com/gif.latex?\[\left|\begin{array}{cccc}{a_1 &    b_1\\  a_2 &    b_2\\}\end{array}\right|])
+![equation](http://latex.codecogs.com/gif.latex?D=\begin{vmatrix}a_1& b_1\\ a_2&b_2 \end{vmatrix})
 
 
 
