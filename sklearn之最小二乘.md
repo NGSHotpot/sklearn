@@ -33,13 +33,13 @@
 
 ![equation](http://latex.codecogs.com/gif.latex?\frac{dy}{da_0}=2na_0+2\sum_{i=1}^{n}{x_ia_1}-2\sum_{i=1}^{n}{y_i}=0)
 
-![equation](http://latex.codecogs.com/gif.latex?\frac{dy}{da_1}=2a_0\sum_{i=1}^{n}{x_i}+2\sum_{i=1}^{n}{x_i^2}-2\sum_{i=1}^{n}{x_iy_i}=0)
+![equation](http://latex.codecogs.com/gif.latex?\frac{dy}{da_1}=2a_0\sum_{i=1}^{n}{x_i}+2\sum_{i=1}^{n}{x_i^2a_1}-2\sum_{i=1}^{n}{x_iy_i}=0)
 
 对上述结果进行整理可以得到方程组：
 
 ![equation](http://latex.codecogs.com/gif.latex?na_0+\sum_{i=1}^{n}{x_ia_1}-\sum_{i=1}^{n}{y_i}=0)
 
-![equation](http://latex.codecogs.com/gif.latex?a_0\sum_{i=1}^{n}{x_i}+\sum_{i=1}^{n}{x_i^2}-\sum_{i=1}^{n}{x_iy_i}=0)
+![equation](http://latex.codecogs.com/gif.latex?a_0\sum_{i=1}^{n}{x_i}+\sum_{i=1}^{n}{x_i^2a_1}-\sum_{i=1}^{n}{x_iy_i}=0)
 
 未知数只有![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)，这个是最简单的求解二元一次方程组的问题啦，大家在初中或者小学的时候就学过了吧！然后可以得到![equation](http://latex.codecogs.com/gif.latex?a_0,a_1)的值了。最后解得结果如下：
 
