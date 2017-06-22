@@ -25,5 +25,5 @@
 
 ![equation](http://latex.codecogs.com/gif.latex?D=\begin{vmatrix}a_1& b_1\\ a_2&b_2 \end{vmatrix})
 
-![equation](http://latex.codecogs.com/gif.latex?\begin{vmatrix}2&%202\\%202&2%20\end{vmatrix})
+![equation](http://latex.codecogs.com/gif.latex?\begin{vmatrix}2&2\\\\%202&2%20\end{vmatrix})
 
