@@ -80,3 +80,7 @@
 ![equation](http://latex.codecogs.com/gif.latex?a_0=\frac{(\sum_{i=1}^{n}{x_i^2+\alpha)}\sum_{i=1}^{n}{y_i}-\sum_{i=1}^{n}{x_i}\sum_{i=1}^{n}{x_iy_i}}{(n+\alpha)(\sum_{i=1}^{n}{x_i^2}+\alpha)-(\sum_{i=1}^{n}{x_i})^2})
 
 ![equation](http://latex.codecogs.com/gif.latex?a_1=\frac{(n+\alpha)\sum_{i=1}^{n}{x_iy_i}-\sum_{i=1}^{n}{x_i}\sum_{i=1}^{n}{y_i}}{(n+\alpha)(\sum_{i=1}^{n}{x_i^2}+\alpha)-(\sum_{i=1}^{n}{x_i})^2})
+
+## 应用实例
+
+
