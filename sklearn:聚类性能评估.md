@@ -10,7 +10,7 @@
 ARI的取值范围为[-1,1]， 聚类结果完全随机则ARI=0, 聚类结果完美之极，则ARI=1.0 。这个方法应该特别适合写了一个算法然后有合适的模拟数据用来评估算法效果。 
 
 1. Fowlkes-Mallows index  
-定义非常简单明了 ![equation](http://latex.codecogs.com/gif.latex?$FMI=\frac{TP}{\sqrt{(TP+FP)(TP+FN)}}) , 其中**TP**是true positive, **FP** 是false positive, **FN**是false negative。这样这个值的范围也是0-1, 1代表完美聚类。
+定义非常简单明了 ![equation](http://latex.codecogs.com/gif.latex?FMI=\frac{TP}{\sqrt{(TP+FP)(TP+FN)}}) , 其中**TP**是true positive, **FP** 是false positive, **FN**是false negative。这样这个值的范围也是0-1, 1代表完美聚类。
 
 ## 没有真实的分类结果
 1. Silhouette Coefficient 
