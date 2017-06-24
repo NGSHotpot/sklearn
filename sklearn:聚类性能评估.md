@@ -8,9 +8,9 @@
 
 1.  Adjusted Rand Index      
 
-对于两个分类结果![equation](http://latex.codecogs.com/gif.latex? X={x_1,...x_n}, Y={y_1,...,y_m}), 例如**X**是真实结果，数据可以分成**n** 类，而**Y**是聚类结果，分成了**m**类，令**a**为在**X**和**Y**中都被分到一个类的点对的数量，令**b**为在**X**和**Y**中都不被分到一个类的点对的数量， 则rand index为![equation](http://latex.codecogs.com/gif.latex?RI = \frac{a+b}{C_{n}^{2}}$)
+对于两个分类结果![equation](http://latex.codecogs.com/gif.latex?X={x_1,...x_n},Y={y_1,...,y_m}), 例如**X**是真实结果，数据可以分成**n** 类，而**Y**是聚类结果，分成了**m**类，令**a**为在**X**和**Y**中都被分到一个类的点对的数量，令**b**为在**X**和**Y**中都不被分到一个类的点对的数量， 则rand index为![equation](http://latex.codecogs.com/gif.latex?RI=\frac{a+b}{C_{n}^{2}}$)
 
-而修正后的rand index如下, 其具体计算方法可见wiki上的列联表公式：https://en.wikipedia.org/wiki/Rand_index ，$ARI = \frac{RI-Expected_{RI}}{max(RI)-Expected_{RI}}$
+而修正后的rand index如下, 其具体计算方法可见wiki上的列联表公式：https://en.wikipedia.org/wiki/Rand_index ，![equation](http://latex.codecogs.com/gif.latex?ARI = \frac{RI-Expected_{RI}}{max(RI)-Expected_{RI}})
 
 ARI的取值范围为[-1,1]， 聚类结果完全随机则ARI=0, 聚类结果完美之极，则ARI=1.0 。这个方法应该特别适合写了一个算法然后有合适的模拟数据用来评估算法效果。 
 
